@@ -3,11 +3,18 @@ import classes from "./meals-grid.module.css";
 export function MealsGrid({ meals }) {
   return (
     <ul className={classes.meals}>
-      <p>aaa</p>
       {meals.map((meal) => {
-        <li key={meal.id}>
-          <MealItem {...meal} />
-        </li>;
+        return (
+          <li key={meal.id}>
+            <MealItem
+              title={meal.title}
+              slug={meal.slug}
+              image={meal.image}
+              summary={meal.summary}
+              creator={meal.creator}
+            />
+          </li>
+        );
       })}
     </ul>
   );
