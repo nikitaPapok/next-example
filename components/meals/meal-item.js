@@ -4,7 +4,6 @@ import Image from "next/image";
 import classes from "./meal-item.module.css";
 
 export default function MealItem({ title, slug, image, summary, creator }) {
-  console.log({ title });
   return (
     <article className={classes.meal}>
       <header>
@@ -13,6 +12,7 @@ export default function MealItem({ title, slug, image, summary, creator }) {
             src={image}
             alt={title}
             fill
+            priority
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
