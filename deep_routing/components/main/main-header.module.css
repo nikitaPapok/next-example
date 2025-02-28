@@ -1,0 +1,17 @@
+.header {}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+
+}
+
+.list {
+    display: flex;
+    gap: 20px
+}
+
+.link {
+    text-decoration: none;
+    color: white
+}
